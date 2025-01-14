@@ -9,7 +9,7 @@ class ScreenThree extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Esta es la pantalla para números entre 19 y 60."),
+            Text("Esta es la pantalla para números entre 19 y 65."),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {

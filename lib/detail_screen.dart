@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-import 'option.dart'; // Importa el modelo Option
+import 'option.dart';
 
 class DetailScreen extends StatefulWidget {
   final Option option;
@@ -18,10 +18,10 @@ class _DetailScreenState extends State<DetailScreen> {
   void initState() {
     super.initState();
 
-    // Extraer el ID del video de la URL
+
     final videoId = YoutubePlayer.convertUrlToId(widget.option.VideoURL)!;
 
-    // Inicializar el controlador de YouTube
+
     _controller = YoutubePlayerController(
       initialVideoId: videoId,
       flags: const YoutubePlayerFlags(

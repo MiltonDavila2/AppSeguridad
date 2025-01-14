@@ -28,22 +28,21 @@ class HomeScreen extends StatelessWidget {
   void _navigateBasedOnInput(BuildContext context, String input) {
     try {
       int number = int.parse(input);
-      if (number >= 1 && number <= 10) {
+      if (number >= 8 && number <= 11) {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => ScreenOne()),
         );
-      } else if (number >= 11 && number <= 18) {
+      } else if (number >= 12 && number <= 18) {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => ScreenTwo()),
         );
-      } else if (number >= 19 && number <= 60) {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => ScreenThree()),
+      } else if (number >= 19 && number <= 64) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("Esta app esta hecha para personas menores a 19 y mayores a 64")),
         );
-      } else if (number > 60) {
+      } else if (number >= 65 && number <= 122) {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => ScreenFour()),
